@@ -1,0 +1,27 @@
+.mailbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .mailbox-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+  }
+  
+  .mailbox-container:hover {
+    transform: scale(1.05);
+  }
+  
