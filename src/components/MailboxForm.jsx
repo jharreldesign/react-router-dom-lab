@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const MailboxForm = ({ addMailbox }) => {
     const [formData, setFormData] = useState({
         name: '',
         size: 'small'
     });
+
+    const navigate = useNavigate(); // Initialize navigate
 
     const handleChange = ({ target }) => {
         setFormData({ ...formData, [target.name]: target.value });
@@ -19,8 +22,9 @@ const MailboxForm = ({ addMailbox }) => {
         }
 
         addMailbox(formData);
-
         setFormData({ name: '', size: 'small' });
+
+        navigate('/mailboxes'); // Redirect to /mailboxes after form submission
     };
 
     return (
